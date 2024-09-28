@@ -1,0 +1,10 @@
+{
+	"name": "datastorage_ls",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://datalakerebrickable2024.dfs.core.windows.net/"
+		}
+	}
+}

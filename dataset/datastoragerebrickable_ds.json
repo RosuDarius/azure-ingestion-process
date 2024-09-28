@@ -1,0 +1,27 @@
+{
+	"name": "datastoragerebrickable_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datastorage_ls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@replace(dataset().fileName, '.gz', '')",
+					"type": "Expression"
+				},
+				"folderPath": "rebrickable/lego/@{replace(replace(dataset().fileName, '.csv.gz', ''), '.gz', '')}/@{formatDateTime(utcnow(),'yyyy')}/@{formatDateTime(utcnow(),'MM')}/@{formatDateTime(utcnow(),'dd')}/",
+				"fileSystem": "raw"
+			}
+		}
+	}
+}
