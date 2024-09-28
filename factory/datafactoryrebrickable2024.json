@@ -1,0 +1,9 @@
+{
+	"name": "datafactoryrebrickable2024",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "88491241-cb0b-406f-85bb-92128f327698",
+		"tenantId": "200d5a65-253e-4a75-bcf3-af9f7a60b013"
+	}
+}
