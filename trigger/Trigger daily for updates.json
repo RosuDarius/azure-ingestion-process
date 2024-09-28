@@ -10,7 +10,7 @@
 					"type": "PipelineReference"
 				},
 				"parameters": {
-					"fileName": "themes.csv.gz"
+					"fileName": "colors.csv.gz"
 				}
 			}
 		],
