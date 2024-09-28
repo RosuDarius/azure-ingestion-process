@@ -19,7 +19,7 @@
 					"value": "@replace(dataset().fileName, '.gz', '')",
 					"type": "Expression"
 				},
-				"folderPath": "rebrickable/lego/@{formatDateTime(utcnow(),'yyyy')}/@{formatDateTime(utcnow(),'MM')}/@{formatDateTime(utcnow(),'dd')}/",
+				"folderPath": "rebrickable/lego/@{replace(replace(dataset().fileName, '.csv.gz', ''), '.gz', '')}/@{formatDateTime(utcnow(),'yyyy')}/@{formatDateTime(utcnow(),'MM')}/@{formatDateTime(utcnow(),'dd')}/",
 				"fileSystem": "raw"
 			}
 		}
