@@ -5,12 +5,21 @@
 			"referenceName": "datastorage_ls",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"fileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "theme.csv",
+				"fileName": {
+					"value": "@replace(dataset().fileName, '.gz', '')",
+					"type": "Expression"
+				},
+				"folderPath": "rebrickable/lego/@{formatDateTime(utcnow(),'yyyy')}/@{formatDateTime(utcnow(),'MM')}/@{formatDateTime(utcnow(),'dd')}/",
 				"fileSystem": "raw"
 			}
 		}
