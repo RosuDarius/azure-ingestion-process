@@ -41,7 +41,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "datastorage_ds",
+						"referenceName": "datastoragerebrickable_ds",
 						"type": "DatasetReference"
 					}
 				]

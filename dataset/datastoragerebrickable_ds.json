@@ -1,19 +1,17 @@
 {
-	"name": "rebrickable_DS",
+	"name": "datastoragerebrickable_ds",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "rebrickable_ls",
+			"referenceName": "datastorage_ls",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
-			},
-			"compression": {
-				"type": "gzip",
-				"level": "Optimal"
+				"type": "AzureBlobFSLocation",
+				"fileName": "theme.csv",
+				"fileSystem": "raw"
 			}
 		}
 	}
