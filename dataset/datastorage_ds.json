@@ -11,10 +11,14 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat('themes_', formatDateTime(utcNow(), 'yyyyMMdd'), '.csv gz')",
+					"value": "@concat('themes_', formatDateTime(utcNow(), 'yyyyMMdd'), '.csv')",
 					"type": "Expression"
 				},
 				"fileSystem": "raw"
+			},
+			"compression": {
+				"type": "gzip",
+				"level": "Optimal"
 			}
 		}
 	}
