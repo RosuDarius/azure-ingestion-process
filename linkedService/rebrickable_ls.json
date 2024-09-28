@@ -1,10 +1,15 @@
 {
 	"name": "rebrickable_ls",
 	"properties": {
+		"parameters": {
+			"fileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://cdn.rebrickable.com/media/downloads/themes.csv.gz",
+			"url": "@{concat('https://cdn.rebrickable.com/media/downloads/', linkedService().fileName)}",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
