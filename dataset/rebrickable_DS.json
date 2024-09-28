@@ -1,0 +1,16 @@
+{
+	"name": "rebrickable_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "rebrickable_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		}
+	}
+}

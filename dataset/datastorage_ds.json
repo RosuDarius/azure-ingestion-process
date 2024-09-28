@@ -1,0 +1,21 @@
+{
+	"name": "datastorage_ds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "datastorage_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat('themes_', formatDateTime(utcNow(), 'yyyyMMdd'), '.csv gz')",
+					"type": "Expression"
+				},
+				"fileSystem": "raw"
+			}
+		}
+	}
+}
