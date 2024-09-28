@@ -35,7 +35,6 @@ The data is updated every day at **12:30 PM UTC+2**. You can create triggers in 
 3. **Create a dataset** to specify the file path and format.
 4. **Create a pipeline** that includes the following activities:
    - **Copy Activity**: To copy the file from Rebrickable to Azure Blob Storage.
-   - **Azure Function Activity** (optional): To decompress the `.gz` file if necessary.
 5. **Set up a sink** to store the decompressed `.csv` file in Azure Data Lake Storage.
 
 ## Folder Structure
